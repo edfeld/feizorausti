@@ -1,0 +1,7 @@
+RewriteEngine Off
+
+AddType video/webm .webm
+AddType video/mp4 .mp4
+
+php_value upload_max_filesize 2000M
+php_value post_max_size 2005M

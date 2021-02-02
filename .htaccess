@@ -1,0 +1,21 @@
+RewriteEngine Off
+
+Options All -Indexes
+
+<Files config/connection.php>
+order allow,deny
+deny from all
+</Files>
+<files .htaccess>
+order allow,deny
+deny from all
+</files>
+
+AddType video/webm .webm
+AddType video/mp4 .mp4
+# ERE202101 - I have this AddType commented out for my 
+# local testing. It causes CSS to be text/html.
+# AddType application/x-httpd-php .css
+
+php_value upload_max_filesize 2000M
+php_value post_max_size 2005M

@@ -1,0 +1,485 @@
+/**
+ * The primary stylesheet for the Simply Analytics system.
+ *
+ * @package Simple Analytics
+ * @author Luke Hollenback <luke@mynamewasluke.com>
+ * @version 1.56
+ */
+
+
+/* UNIVERSAL STYLES */
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,700,300,100,900,500);
+
+body {
+    background-color: #FFFFFF;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    color: #212121;
+}
+#container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.center {
+    text-align: center;
+}
+
+#serverTime {
+    width: 100%;
+    text-align: left;
+}
+#serverTimeCounter {
+    font-weight: bold;
+}
+
+
+/* DEVICE/BROWSER SPECIFIC STYLES */
+@media only screen
+and (max-width: 639px) { /* specific styles for mobile devices */
+    /* UNIVERSAL STYLES */
+    .left {
+        float: none;
+    }
+    .right {
+        float: none;
+    }
+    .clear {
+        clear: none;
+    }
+
+
+    /* SUMMARY STYLES */
+    #control {
+        width: 100%;
+    }
+    #stats {
+        width: 100%;
+    }
+    #colorkey {
+        width: 97%;
+    }
+    #geosummary {
+        width: 98%;
+    }
+    #refreshButton {
+        width: 98%;
+    }
+    #printButton {
+        width: 98%;
+    }
+
+    /* VISITOR DETAILS STYLES */
+    .mapImage {
+        float: none;
+        margin-left: 0px;
+        margin-bottom: 18px;
+    }
+    #mapLink {
+        text-align: center;
+        display: inline-block;
+        width: 100%;
+    }
+    #refreshDetailsControlBox {
+        float: none;
+        width: 100%;
+    }
+    #settingsDetailsControlBox {
+        float: none;
+        width: 100%;
+    }
+}
+
+@media only screen
+and (min-device-width : 480px) { /* specific styles for larger devices or browser windows */
+    /* SUMMARY STYLES */
+    #refreshButton:hover {
+        background-color: #388E3C;
+
+        box-shadow: 0px -2px #2E7D32, 0px 2px #388E3C;
+
+        cursor: pointer;
+    }
+    #printButton:hover {
+        background-color: #303F9F;
+
+        box-shadow: 0px -2px #283593, 0px 2px #303F9F;
+
+        cursor: pointer;
+    }
+
+    #visitorTable tr:nth-child(odd):hover {
+        background-color: #BDBDBD;
+
+        cursor: pointer;
+    }
+    #visitorTable tr:nth-child(even):hover {
+        background-color: #BDBDBD;
+
+        cursor: pointer;
+    }
+
+
+    /* VISITOR DETAILS STYLES */
+    #visitsTable tr:nth-child(odd):hover {
+        background-color: #BDBDBD;
+    }
+    #visitsTable tr:nth-child(even):hover {
+        background-color: #BDBDBD;
+    }
+}
+
+@media only screen /* specific styles for large devices */
+and (min-width: 640px) {
+    /* UNIVERSAL STYLES */
+    .left {
+        float: left;
+    }
+    .right {
+        float: right;
+    }
+    .clear {
+        clear: both;
+    }
+
+    /* SUMMARY STYLES */
+    #control {
+        width: 21%;
+    }
+    #stats {
+        width: 77%;
+    }
+    #colorkey {
+        width: 95%;
+    }
+    #geosummary {
+        width: 95%;
+    }
+    #refreshButton {
+        width: 95%;
+    }
+    #printButton {
+        width: 95%;
+    }
+
+    /* VISITOR DETAILS STYLES */
+    .mapImage {
+        float: right;
+        margin-left: 8px;
+        margin-bottom: 8px;
+    }
+    #refreshDetailsControlBox {
+        float: left;
+        width: 49%;
+        padding-right: 1%;
+    }
+    #settingsDetailsControlBox {
+        float: right;
+        width: 49%;
+        padding-left: 1%;
+    }
+}
+
+
+/* SUMMARY STYLES */
+#overview {
+    width: 100%;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+
+    text-align: center;
+}
+#stats {
+    margin-bottom: 16px;
+}
+#control {
+    margin-bottom: 16px;
+}
+#colorkey {
+    padding: 4px;
+    margin-bottom: 8px;
+}
+#geosummary {
+    padding: 4px;
+    margin-bottom: 8px;
+
+    background-color: #EFEFEF;
+
+    text-align: center;
+
+    border-radius: 3px;
+}
+#refreshButton {
+    padding: 4px;
+    margin-bottom: 10px;
+
+    background-color: #4CAF50;
+
+    color: #FFFFFF;
+    text-align: center;
+
+    border-radius: 3px;
+
+    box-shadow: 0px 2px #43A047, 0px -2px #4CAF50;
+}
+#printButton {
+    padding: 4px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+
+    background-color: #3F51B5;
+
+    color: #FFFFFF;
+    text-align: center;
+
+    border-radius: 3px;
+
+    box-shadow: 0px 2px #303F9F, 0px -2px #3F51B5;
+}
+#settings {
+
+}
+#visitors {
+    width: 100%;
+}
+
+.selected {
+    background-color: #EEEEEE;
+
+    border-radius: 3px;
+}
+
+.redKeyBox {
+    width: 19px;
+    height: 19px;
+    margin-right: 4px;
+    margin-bottom: 1px;
+
+    display: inline-block;
+
+    background-color: #B71C1C;
+
+    color: #B71C1C;
+    text-align: center;
+
+    border-radius: 2px;
+}
+.blueKeyBox {
+    width: 19px;
+    height: 19px;
+    margin-right: 4px;
+
+    display: inline-block;
+
+    background-color: #311B92;
+
+    color: #311B92;
+    text-align: center;
+
+    border-radius: 2px;
+}
+
+.overviewBox {
+    width: 19%;
+
+    display: inline-block;
+
+    text-align: center;
+}
+.overviewBoxInner {
+    width: 100%;
+    margin-left: 1.5px;
+}
+.overviewBoxInner:hover {
+    background-color: #F5F5F5;
+
+    border-radius: 3px;
+
+    cursor: pointer;
+}
+.overviewBoxTitle {
+    font-size: 14px;
+    font-weight: bold;
+}
+.overviewBoxVisit {
+    color: #B71C1C;
+    font-weight: bold;
+}
+.overviewBoxPageView {
+    color: #311B92;
+    font-weight: bold;
+}
+
+.visitorsBar {
+    height: 16px;
+    margin-bottom: 1px;
+    padding: 3px 0px 0px 0px;
+
+    display: block;
+
+    background-color: #B71C1C;
+
+    color: #FFFFFF;
+    text-align: center;
+    font-weight: 400;
+
+    border-radius: 2px;
+}
+.pageViewsBar {
+    height: 16px;
+    padding: 3px 0px 0px 0px;
+
+    display: block;
+
+    background-color: #311B92;
+
+    color: #FFFFFF;
+    text-align: center;
+    font-weight: 400;
+
+    border-radius: 2px;
+}
+#desktopBar {
+    width: 5%;
+    min-width: 5%;
+}
+#mobileBar {
+    width: 5%;
+    min-width: 5%;
+}
+#unknownBar {
+    width: 5%;
+    min-width: 5%;
+}
+#desktopBarPageViews {
+    width: 5%;
+    min-width: 5%;
+}
+#mobileBarPageViews {
+    width: 5%;
+    min-width: 5%;
+}
+#unknownBarPageViews {
+    width: 5%;
+    min-width: 5%;
+}
+
+#visitorBox {
+    width: 100%;
+}
+#visitorTable {
+    width: 100%;
+
+    border-collapse: separate;
+
+    text-align: center;
+    font-size: 12px;
+
+    border-radius: 2px;
+}
+#visitorTable th {
+    width: 14.29%;
+
+    background-color: #9E9E9E;
+
+    border-radius: 2px;
+
+    color: white;
+}
+#visitorTable tr {
+    background-color: #FAFAFA;
+
+    border: 1px solid #9E9E9E;
+}
+#visitorTable tr:hover {
+    background-color: #BDBDBD;
+
+    cursor: pointer;
+}
+#visitorTable tr:nth-child(odd) {
+    background-color: #FAFAFA;
+}
+#visitorTable tr:nth-child(even) {
+    background-color: #E0E0E0;
+}
+#visitorTable tr.page {
+    background-color: #FFFFFF;
+}
+#visitorTable tr.page:hover {
+    background-color: #FFFFFF;
+    cursor: default;
+}
+
+/* Hide the 1st table column, SiteId - ERE20201028 */
+#visitorBox th:nth-child(1), #visitorBox td:nth-child(1) {
+    display: none;
+}
+/* VISITOR DETAILS STYLES */
+#details {
+    width: 100%;
+    margin-bottom: 18px;
+}
+#visits {
+    width: 100%;
+}
+
+#visitsBox {
+    width: 100%;
+}
+#visitsTable {
+    width: 100%;
+
+    border-collapse: separate;
+
+    text-align: center;
+    font-size: 12px;
+
+    border-radius: 2px;
+}
+#visitsTable th {
+    width: 25%;
+
+    background-color: #9E9E9E;
+
+    border-radius: 2px;
+
+    color: white;
+}
+#visitsTable tr {
+    background-color: #FAFAFA;
+
+    border: 1px solid #9E9E9E;
+}
+#visitsTable tr:hover {
+    background-color: #BDBDBD;
+}
+#visitsTable tr:nth-child(odd) {
+    background-color: #FAFAFA;
+}
+#visitsTable tr:nth-child(even) {
+    background-color: #E0E0E0;
+}
+
+.keyItem {
+    width: 96px;
+
+    display: inline-block;
+}
+
+.mapImage {
+    border-radius: 3px;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: 900;
+    text-align: center;
+}
+
+#detailsControlBox {
+    width: 100%;
+    margin-top: 8px;
+}

@@ -1,0 +1,47 @@
+@font-face {
+  font-family: 'niloofar';
+  font-style: normal;
+  src: local('niloofar'), local('niloofar'), url(fonts/niloofar.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'niloofarBd';
+  font-style: normal;
+  src: local('niloofarBd'), local('niloofarBd'), url(fonts/niloofarBd.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'niloofarBdIt';
+  font-style: normal;
+  src: local('niloofarBdIt'), local('niloofarBdIt'), url(fonts/niloofarBdIt.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'niloofarIt';
+  font-style: normal;
+  src: local('niloofarIt'), local('niloofarIt'), url(fonts/niloofarIt.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'homa';
+  font-style: normal;
+  src: local('homa'), local('homa'), url(fonts/homa.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'tahoma';
+  font-style: normal;
+  src: local('tahoma'), local('tahoma'), url(fonts/tahoma.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'tahomabd';
+  font-style: normal;
+  src: local('tahomabd'), local('tahomabd'), url(fonts/tahomabd.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'opensans';
+  font-style: normal;
+  src: local('opensans'), local('opensans'), url(fonts/opensans.woff) format('woff');
+}

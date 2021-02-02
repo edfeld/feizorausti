@@ -1,0 +1,119 @@
+/**
+ * A dark theme for Simple Analytics
+ *
+ * @package Simple Analytics
+ * @author Luke Hollenback <luke@mynamewasluke.com>
+ * @version 1.56
+ */
+body {
+  background-color: #1e1e1e;
+  color: #fefefe; }
+
+a {
+  color: #8b8b8b; }
+
+a:hover {
+  color: #a5a5a5; }
+
+#geosummary {
+  background-color: #242424; }
+
+.overviewBoxInner.selected {
+  background-color: #181818; }
+
+.overviewBoxInner:hover {
+  background-color: #1a1a1a; }
+
+.overviewBoxVisit {
+  color: #383838; }
+
+.overviewBoxPageView {
+  color: #515151; }
+
+.redKeyBox {
+  background-color: #383838;
+  color: #383838; }
+
+.blueKeyBox {
+  background-color: #515151;
+  color: #515151; }
+
+.visitorsBar {
+  background-color: #383838; }
+
+.pageViewsBar {
+  background-color: #515151; }
+
+#visitorTable th {
+  background-color: #181818;
+  color: #fefefe; }
+
+#visitorTable tr {
+  background-color: #181818; }
+
+#visitorTable tr:hover {
+  background-color: #181818; }
+
+#visitorTable tr:nth-child(odd) {
+  background-color: #2b2b2b; }
+
+#visitorTable tr:nth-child(odd):hover {
+  background-color: #1a1a1a; }
+
+#visitorTable tr:nth-child(even) {
+  background-color: #242424; }
+
+#visitorTable tr:nth-child(even):hover {
+  background-color: #1a1a1a; }
+
+#visitorTable tr.page {
+  background-color: #1e1e1e; }
+
+#visitorTable tr.page:hover {
+  background-color: #1e1e1e;
+  cursor: default; }
+
+#visitsTable th {
+  background-color: #181818;
+  color: #fefefe; }
+
+#visitsTable tr {
+  background-color: #181818; }
+
+#visitsTable tr:hover {
+  background-color: #181818; }
+
+#visitsTable tr:nth-child(odd) {
+  background-color: #2b2b2b; }
+
+#visitsTable tr:nth-child(odd):hover {
+  background-color: #1a1a1a; }
+
+#visitsTable tr:nth-child(even) {
+  background-color: #242424; }
+
+#visitsTable tr:nth-child(even):hover {
+  background-color: #1a1a1a; }
+
+#refreshButton {
+  background-color: #444444;
+  color: #fefefe;
+  box-shadow: 0px 2px #383838, 0px -2px #444444; }
+
+#printButton {
+  background-color: #444444;
+  color: #fefefe;
+  box-shadow: 0px 2px #383838, 0px -2px #444444; }
+
+@media only screen and (min-device-width: 480px) {
+  #refreshButton:hover {
+    background-color: #3e3e3e;
+    color: #fefefe;
+    box-shadow: 0px 2px #3e3e3e, 0px -2px #313131; }
+
+  #printButton:hover {
+    background-color: #3e3e3e;
+    color: #fefefe;
+    box-shadow: 0px 2px #3e3e3e, 0px -2px #313131; } }
+
+/*# sourceMappingURL=dark.css.map */

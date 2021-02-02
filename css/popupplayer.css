@@ -1,0 +1,89 @@
+@import url("fonts.css");
+
+* {
+	margin: 0px;
+	padding: 0px;
+}
+body {
+	background-color: #F4F4F4;
+	scrollbar-base-color: #6666FF;
+}
+#player{
+	font-family: Homa, OpenSans, Calibri;
+	width: auto;
+	height: auto;
+	color: #555555;
+	padding: 10px 20px;
+}
+#liveradio {
+	font-size: 17px;
+	text-align: center;
+	margin: 0px 0px 10px 0px;
+}
+#song-information{
+	width: 70%;
+	float: left;
+	text-align: right;
+}
+#controls{
+	font-size: 14px;
+	width: 30%;
+	float: left;
+	text-align: right;
+}
+#play-pause{
+	width: 40px;
+	height: 41px;
+	cursor: pointer;
+	float: right;
+}
+.paused{
+    background-image: url('../uploads/source/images/players/small-gray-play.png');
+    background-repeat: no-repeat;
+}
+.playing{
+    background-image: url('../uploads/source/images/players/small-gray-pause.png');
+    background-repeat: no-repeat;
+}
+#volume-slider{
+	width: 100%;
+}
+#now-playing-name{
+	font-size: 14px;
+	font-weight: 400;
+	margin: 0px 0px 2px 0px;
+}
+#now-playing-album{
+	font-size: 13px;
+	margin: 0px 0px 5px 0px;
+}
+#current-time{
+	font-family: OpenSans, Calibri;
+	font-size: 14px;
+	font-weight: 400;
+	float: right;
+	width: 98%;
+	padding: 4px 6px 5px 0px;
+}
+#popuplink {
+	font-size: 13px;
+	text-align: center;
+	margin: 0px 0px 20px 0px;
+}
+#popuplink li {
+	margin:3px 2px 2px 2px;
+	display: block;
+	float:left;
+}
+
+#popuplink img {
+	padding: 0px 3px;
+	margin: 5px 0px 0px 0px;
+}
+#popuplink img:hover {
+    -moz-transform: translate(0px, -4px);
+    -ms-transform: translate(0px, -4px);
+    -o-transform: translate(0px, -4px);
+    -webkit-transform: translate(0px, -4px);
+    transform: translate(0px, -4px);
+}
